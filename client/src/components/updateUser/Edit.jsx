@@ -21,7 +21,7 @@ const inputChangeHandler = (e) =>{
 }
 
 useEffect(()=>{
-  axios.get(`http://localhost:8000/api/getone/${id}`)
+  axios.get(`https://crud-mern-oiyg.onrender.com/api/getone/${id}`)
   .then((response)=>{
      setUser(response.data)
   })
@@ -32,7 +32,7 @@ useEffect(()=>{
 
 const submitForm = async(e)=>{
   e.preventDefault();
-await axios.put(`http://localhost:8000/api/update/${id}`, user)
+await axios.put(`https://crud-mern-oiyg.onrender.com/api/update/${id}`, user)
 .then((response)=>{
 toast.success(response.data.msg, {position:"top-right"})
 navigate("/")
